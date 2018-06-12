@@ -26,6 +26,4 @@ case class SpatialJoinHint(child: LogicalPlan, hints: Map[String, String])
   extends UnaryNode {
 
   override def output: Seq[Attribute] = child.output
-
-  override lazy val canonicalized: LogicalPlan = SpatialJoinHint(child, hints)
 }
